@@ -1,0 +1,159 @@
+/* Brings name in header and navigation links on the same line */
+/* h1, nav {
+    display:inline-block;
+} */
+
+body {
+    display: flex;
+}
+/* Sets the background color and size of the main header */
+header {
+    width: 100%;
+    /* height: 100%; */
+    /* background: #1d2158; */
+    display: flex;
+    /* color: #f2f6db; */
+}
+
+h2 {
+    margin-left: 5%;
+}
+
+
+/* Sets the background color of the body */
+body {
+    background-color: #deebef;
+    display: block;
+}
+
+/* Sets the font for the paragraph in the about me
+section */
+p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+footer {
+    text-align: center;
+    background-color: #b0dedb;
+    color: #550d57;
+}
+
+/* Sets the text-color of the first name in the header */
+.first-name {
+    color: #efdede;
+}
+
+
+.header-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f5bd8d;
+    width: 65%;
+    /* height: 60px; */
+    /* margin-left: 50%; */
+     
+}
+
+.header-name {
+    display: flex;
+    width: 1cm;
+    height: 1.5em;
+    justify-content: space-around;
+    background: #1d2158;
+    font-size:2.5em;
+}
+
+.header-name, .header-nav {
+    vertical-align: right;
+    text-align: center;
+    /* width: 50%; */
+}
+
+.first-name {
+    display: table;
+    vertical-align: middle;
+}
+
+
+/* Sets the text-color of the last name in the header */
+.last-name {
+    display: table;
+    color: #f5bd8d;
+    vertical-align: middle; 
+}
+
+
+/* Sets font family and size for name in header */
+.first-name, .last-name {
+    display: inline;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* Sets the text-color and spacing of the navigation links in the header */
+.head-nav {
+    color:#1d2158;
+    display: flex;
+    justify-content: flex-end;
+    /* margin: -10% 0% 10% 6.7%; */
+}
+
+/* Centers the about me block, sets section color, and puts a border around section */
+.about-me {
+    margin: 10% auto;
+    background-color: aliceblue;
+    border:#1d2158 solid 1vw;
+}
+
+/* Sets backgruond color and border for education and experience section. It also centers section */
+.education-experience {
+    background-color: aliceblue;
+    border:#1d2158 solid 1vw;
+    margin: 10% auto;
+}
+
+/* Sets the border, background color, and top margin for the
+contact info section */
+.contact-information {
+    border:#1d2158 solid 1vw;
+    background-color: #a3a6cb;
+    margin: 10% auto;
+}
+    
+
+/* Indents the name in the header */
+.header-name {
+    width: 11.1em;
+}
+
+.main-image {
+    /* width: 20px; */
+    /* height: 200px; */
+    display: flex;
+    justify-content: center;
+    margin: 4%;
+}
+
+@media screen and (max-width: 45em) {
+    main,
+    .header-nav {
+      display: flex;
+      flex-direction: column;
+      /* align-content: center; */
+    }
+
+    .head-nav {
+        display: flex;
+        text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 46em) {
+    main,
+    .header-nav {
+      justify-content: space-around;
+    }
+  }
+
+
+
