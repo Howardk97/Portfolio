@@ -1,37 +1,25 @@
-/* Brings name in header and navigation links on the same line */
-/* h1, nav {
-    display:inline-block;
-} */
-
+/* Sets the background color aqnd font of the body */
 body {
-    display: flex;
-}
-/* Sets the background color and size of the main header */
-header {
-    width: 100%;
-    /* height: 100%; */
-    /* background: #1d2158; */
-    display: flex;
-    /* color: #f2f6db; */
+    background-color: #deebef;
+    font-family: serif;
 }
 
+/* Forces the name and links in the header be on one line */
+header {
+    display: flex;
+}
+
+/* Indents the titles in the sections at the bottom of the page */
 h2 {
     margin-left: 5%;
 }
 
-
-/* Sets the background color of the body */
-body {
-    background-color: #deebef;
-    display: block;
-}
-
-/* Sets the font for the paragraph in the about me
-section */
 p {
-    font-family:'Times New Roman', Times, serif;
+    margin-left: 5%;
 }
 
+/* Sets the position, background color, and text-color of
+footer of page */
 footer {
     text-align: center;
     background-color: #b0dedb;
@@ -43,39 +31,6 @@ footer {
     color: #efdede;
 }
 
-
-.header-nav {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    background-color: #f5bd8d;
-    width: 100%;
-    /* height: 60px; */
-    /* margin-left: 50%; */
-     
-}
-
-.header-name {
-    display: flex;
-    width: 1cm;
-    height: 1.5em;
-    justify-content: space-around;
-    background: #1d2158;
-    font-size:2.5em;
-}
-
-.header-name, .header-nav {
-    vertical-align: right;
-    text-align: center;
-    /* width: 50%; */
-}
-
-.first-name {
-    display: table;
-    vertical-align: middle;
-}
-
-
 /* Sets the text-color of the last name in the header */
 .last-name {
     display: table;
@@ -83,93 +38,128 @@ footer {
     vertical-align: middle; 
 }
 
-
 /* Sets font family and size for name in header */
 .first-name, .last-name {
     display: inline;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+/* Sets the dimensions of the header name and uses flex to
+put space around the first and last name, sets the background
+for the name portion of the header, sets the font size for the 
+name in the header */
+.header-name {
+    display: flex;
+    width: 31%;
+    height: 1.5em;
+    justify-content: space-around;
+    background: #1d2158;
+    font-size:2.5em;
+}
+
+/* Uses flex to move the header navigation links to the right
+of the page when screen is big enough and center the links 
+verically, set the background color for the links, and forces 
+the container of the links to go all the way to the end of the 
+header */
+.header-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #f5bd8d;
+    width: 100%;
+}
+
 /* Sets the text-color and spacing of the navigation links in the header */
 .head-nav {
     color:#1d2158;
     margin-right: 2%;
-    /* margin: -10% 0% 10% 6.7%; */
 }
 
-.sects {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-
-.about-me, .education-experience, .contact-information {
-    display: flex;
-    justify-content: center;
-    margin: 1%;
-    flex-direction: column;
-}
-/* Centers the about me block, sets section color, and puts a border around section */
-.about-me {
-    /* margin: 10% auto; */
-    display: flex;
-    /* flex-direction: column; */
-    background-color: aliceblue;
-    border:#1d2158 solid 0.5vw;
-    flex-direction: column;
-    margin: 0.5%;
-    width: 70%;
-    height:50%
-}
-
-/* Sets backgruond color and border for education and experience section. It also centers section */
-.education-experience {
-    background-color: aliceblue;
-    border:#1d2158 solid 0.5vw;
-    /* margin: 10% austo; */
-    widows: 10em;
-}
-
-/* Sets the border, background color, and top margin for the
-contact info section */
-.contact-information {
-    border:#1d2158 solid 0.5vw;
-    background-color: #a3a6cb;
-    /* margin: 10% auto; */
-    width: 18.3em;
-    height: 10em;
-}
-
-.education-experience {
-    width: 200em;
-}
-    
-
-/* Indents the name in the header */
-.header-name {
-    width: 11.1em;
-}
-
+/* Uses flex to center the head shot and puts a margin
+around it */
 .main-image {
-    /* width: 20px; */
-    /* height: 200px; */
     display: flex;
     justify-content: center;
     margin: 4%;
 }
 
-@media screen and (max-width: 45em) {
+.sects {
+    display: flex;
+    justify-content: space-around;
+    margin: 5%;
+}
+
+.about-me, .education-experience, .contact-information {
+    display: flex;
+    flex-direction: column;
+    /* flex-direction: column; */
+    border:#1d2158 solid 0.3vw;
+    background-color: aliceblue;
+
+
+}
+/* Centers the about me block, sets section color, and puts a border around section */
+.about-me {
+    width: 90%;
+    height: 47%;
+}
+
+/* Sets backgruond color and border for education and experience section. It also centers section */
+.education-experience {
+    width: 150%;
+    height: 100%;
+}
+
+/* Sets the border, background color, and top margin for the
+contact info section */
+.contact-information {
+    background-color: #a3a6cb;
+    width: 37%;
+    height: 35%;
+    margin-top: 5%;
+    margin-right: 10%;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-right:;
+}
+
+
+@media screen and (max-width: 75em) {
     main,
     .header-nav {
       display: flex;
       flex-direction: column;
-      /* align-content: center; */
+      justify-content: space-around;
     }
 
     .head-nav {
         display: flex;
         text-align: center;
+    }
+
+    .header-name {
+        display: flex;
+        flex-wrap: wrap;
+        height: 3em;
+    }
+    .about-me {
+        height:55%;
+    }
+
+    .education-experience {
+        height: 75%
+    }
+
+    .contact-information {
+        margin-top: 5%;
+    }
+
+    .education-experience {
+        width: 150%;
     }
   }
 
