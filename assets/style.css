@@ -29,7 +29,7 @@ body {
 /* Sets the font for the paragraph in the about me
 section */
 p {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:'Times New Roman', Times, serif;
 }
 
 footer {
@@ -46,10 +46,10 @@ footer {
 
 .header-nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
     background-color: #f5bd8d;
-    width: 65%;
+    width: 100%;
     /* height: 60px; */
     /* margin-left: 50%; */
      
@@ -93,31 +93,56 @@ footer {
 /* Sets the text-color and spacing of the navigation links in the header */
 .head-nav {
     color:#1d2158;
-    display: flex;
-    justify-content: flex-end;
+    margin-right: 2%;
     /* margin: -10% 0% 10% 6.7%; */
 }
 
+.sects {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.about-me, .education-experience, .contact-information {
+    display: flex;
+    justify-content: center;
+    margin: 1%;
+    flex-direction: column;
+}
 /* Centers the about me block, sets section color, and puts a border around section */
 .about-me {
-    margin: 10% auto;
+    /* margin: 10% auto; */
+    display: flex;
+    /* flex-direction: column; */
     background-color: aliceblue;
-    border:#1d2158 solid 1vw;
+    border:#1d2158 solid 0.5vw;
+    flex-direction: column;
+    margin: 0.5%;
+    width: 70%;
+    height:50%
 }
 
 /* Sets backgruond color and border for education and experience section. It also centers section */
 .education-experience {
     background-color: aliceblue;
-    border:#1d2158 solid 1vw;
-    margin: 10% auto;
+    border:#1d2158 solid 0.5vw;
+    /* margin: 10% austo; */
+    widows: 10em;
 }
 
 /* Sets the border, background color, and top margin for the
 contact info section */
 .contact-information {
-    border:#1d2158 solid 1vw;
+    border:#1d2158 solid 0.5vw;
     background-color: #a3a6cb;
-    margin: 10% auto;
+    /* margin: 10% auto; */
+    width: 18.3em;
+    height: 10em;
+}
+
+.education-experience {
+    width: 200em;
 }
     
 
