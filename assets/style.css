@@ -2,6 +2,8 @@
 body {
     background-color: #deebef;
     font-family: serif;
+    font-size: 14px;
+    width: 100%
 }
 
 /* Forces the name and links in the header be on one line */
@@ -10,12 +12,8 @@ header {
 }
 
 /* Indents the titles in the sections at the bottom of the page */
-h2 {
-    margin-left: 5%;
-}
-
-p {
-    margin-left: 5%;
+p, h2, h4, li {
+    margin: 5%;
 }
 
 /* Sets the position, background color, and text-color of
@@ -26,6 +24,11 @@ footer {
     color: #550d57;
 }
 
+/* Indents the websites */
+.website-1, .other-websites {
+    margin-left: 5%
+}
+
 /* Sets the text-color of the first name in the header */
 .first-name {
     color: #efdede;
@@ -33,19 +36,17 @@ footer {
 
 /* Sets the text-color of the last name in the header */
 .last-name {
-    display: table;
     color: #f5bd8d;
-    vertical-align: middle; 
 }
 
 /* Sets font family and size for name in header */
 .first-name, .last-name {
     display: inline;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: cursive;
 }
 
 /* Sets the dimensions of the header name and uses flex to
-put space around the first and last name, sets the background
+put space around the first and last name, sets the background color and size
 for the name portion of the header, sets the font size for the 
 name in the header */
 .header-name {
@@ -84,30 +85,21 @@ around it */
     margin: 4%;
 }
 
+/* Sets the width for the main sections at the bottom */
 .sects {
-    display: flex;
-    justify-content: space-around;
-    margin: 5%;
+    width: 100%;
 }
 
+/* Sets the border decoration and margin of the sections at the bottom */
 .about-me, .education-experience, .contact-information {
-    display: flex;
-    flex-direction: column;
-    /* flex-direction: column; */
     border:#1d2158 solid 0.3vw;
     background-color: aliceblue;
-
-
-}
-/* Centers the about me block, sets section color, and puts a border around section */
-.about-me {
-    width: 90%;
-    height: 47%;
+    width: 100%;
+    margin: 5%;
 }
 
 /* Sets backgruond color and border for education and experience section. It also centers section */
 .education-experience {
-    width: 150%;
     height: 100%;
 }
 
@@ -115,58 +107,39 @@ around it */
 contact info section */
 .contact-information {
     background-color: #a3a6cb;
-    width: 37%;
     height: 35%;
-    margin-top: 5%;
+
+}
+
+/* Forces the website pictures to wrap if overflow happens and puts 
+space between images and gives images right margin */
+.other-websites {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     margin-right: 10%;
 }
 
-.contact-container {
-    display: flex;
-    justify-content: flex-end;
-    margin-right:;
-}
-
-
+/* Conditions under screen size of 75em */
 @media screen and (max-width: 75em) {
-    main,
+    /* Navigation links in header goes to rows with space around it */
     .header-nav {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
     }
 
+    /* Centers the navigation links vertically in the header */
     .head-nav {
         display: flex;
         text-align: center;
     }
 
+    /* Header name goes to two rows */
     .header-name {
         display: flex;
         flex-wrap: wrap;
         height: 3em;
-    }
-    .about-me {
-        height:55%;
-    }
-
-    .education-experience {
-        height: 75%
-    }
-
-    .contact-information {
-        margin-top: 5%;
-    }
-
-    .education-experience {
-        width: 150%;
-    }
-  }
-
-  @media screen and (max-width: 46em) {
-    main,
-    .header-nav {
-      justify-content: space-around;
     }
   }
 
